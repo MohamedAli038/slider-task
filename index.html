@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container{
+            background-color: black;
+            padding: 30px;
+        }
+        .box img{
+            width:200px;
+            height:250px;
+            min-width:200px;   
+        }
+
+        .image-container{
+            display: flex;
+            overflow: scroll;
+            gap:20px;
+        }
+
+        ::-webkit-scrollbar{
+            display: none;
+        }
+
+        button{
+            border: none;
+            background-color: white;
+            width:100px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <button onclick="handleLeftClick()">&#10094</button>
+        <div class="image-container" id="image-cont">
+
+            <div class="box"> <img src="./images/slide1.jpg" alt="" ></div>
+            <div class="box"> <img src="./images/slide2.jpg" alt="" ></div>
+            <div class="box"> <img src="./images/slide3.jpg" alt="" ></div>
+            <div class="box"> <img src="./images/slide4.jpg" alt="" ></div>
+            <div class="box"> <img src="./images/slide5.jpg" alt="" ></div>
+            <div class="box"> <img src="./images/slide6.jpg" alt="" ></div>
+            <div class="box"> <img src="./images/slide7.jpg" alt="" ></div>
+            <div class="box"> <img src="./images/slide8.jpg" alt="" ></div>
+          
+
+
+
+
+        </div>
+
+        <button onclick="handleRightClick()">&#10095</button>
+
+    </div>
+    <script>
+        var imagecont = document.getElementById("image-cont")
+        function handleLeftClick()
+        {
+            imagecont.scrollLeft -= 100
+            imagecont.scrollLeft
+        }
+        function handleRightClick()
+        {
+            imagecont.scrollLeft += 100
+            imagecont.scrollLeft
+        }
+    </script>
+</body>
+
+</html>
